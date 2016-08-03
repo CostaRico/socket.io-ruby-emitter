@@ -13,7 +13,7 @@ module SocketIO
 
     def initialize(options = {})
       @redis = options[:redis] || Redis.new
-      @key = "#{options[:key] || 'socket.io'}#emitter";
+      @key = "#{options[:key] || 'socket.io'}/#emitter#";
       @nsp = nil
       @rooms = []
       @flags = {}
